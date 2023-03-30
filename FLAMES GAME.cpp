@@ -53,14 +53,7 @@ int main()
  s1 = v1.size();
  s2 = v2.size();
  //cout<<" s1 s2 are "<<s1<<" and "<<s2<<endl;
-   //--------------------checking ku oru print----------------//
-//   for(auto x : v1)
-//   cout<<x;
-//   cout<<'\n';
-//   for(auto x : v2)
-//   cout<<x;
-   //--------------------checking----------------//
-   
+
    
   for(int i=0 ; i<s1 ; i++)
   {
@@ -69,10 +62,7 @@ int main()
           if(v1[i] == j)
           {
               v1[i] = '0';
-              //---the below line removes all si,ilar emelents-----------//
-             // v2.erase( remove(v2.begin() , v2.end() , j) , v2.end() );
-             
-             //-------want to remove only one element la----------------//
+            
              auto f = find(v2.begin(),v2.end(),j);
              
              if(f != v2.end())
@@ -96,7 +86,7 @@ int main()
   
   
   
-  //-------------remove all similar elements ku ithu---------------//
+ 
   v1.erase( remove(v1.begin() , v1.end() , '0') , v1.end() );
 
 //for(auto it : v1)
